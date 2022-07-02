@@ -7,6 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        treeGreen: "#38C68B",
+        treeDarkGreen: "#222A2B",
+        treeCyan: "#109DA0",
+        treeGray: "#E8EAED",
+      },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         barlow: ["Barlow", "sans-serif"],
