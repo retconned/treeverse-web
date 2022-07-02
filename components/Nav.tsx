@@ -36,6 +36,7 @@ const Navbar: NextPage = () => {
         height={50}
         objectFit="contain"
         alt="Treeverse Logo"
+        draggable={false}
       />
       <div className="hidden md:flex">
         <ul className=" md:flex md:flex-row md:space-x-4">
