@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Navbar from "../components/Nav";
 import HeroSection from "../components/HeroSection";
+import FollowupSection from "../components/FollowupSection";
 
 const Home: NextPage = () => {
   return (
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
       <main>
         <Navbar />
         <HeroSection />
+        <FollowupSection />
       </main>
     </div>
   );
