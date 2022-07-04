@@ -28,6 +28,7 @@ const FollowupSection: NextPage = () => {
       <div className="relative flex h-[calc(100vh-25vh)] w-full flex-col justify-between md:hidden md:h-[91vh] md:min-w-[30vw] lg:flex ">
         <div className="absolute top-[6%] left-[70%] h-fit w-[101px] overflow-hidden rounded-xl border-4  border-white md:left-[44%] md:w-[193px] lg:left-[60%]">
           <Image
+            draggable={false}
             unoptimized={true}
             src={CharDesign}
             alt="Character design"
@@ -37,6 +38,7 @@ const FollowupSection: NextPage = () => {
         </div>
         <div className="absolute top-[8%] left-[5%] h-fit w-[183px] overflow-hidden rounded-xl border-4  border-white md:left-[25%] md:top-[35%] md:w-[166px] lg:top-[25%] lg:left-[25%] lg:w-[266px]">
           <Image
+            draggable={false}
             unoptimized={true}
             src={IslandDesign}
             alt="Floating island environment design"
@@ -46,6 +48,7 @@ const FollowupSection: NextPage = () => {
         </div>
         <div className="absolute top-[50%] left-[5%] h-fit w-[350px] overflow-hidden rounded-xl border-4 border-white md:top-[62%] md:w-[250px] lg:left-[11%] lg:w-[250px] 2xl:left-[40%]">
           <Image
+            draggable={false}
             unoptimized={true}
             src={LazerIslandDesign}
             alt="island environment design with laser in the middle"
