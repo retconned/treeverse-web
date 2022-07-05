@@ -5,6 +5,7 @@ import Navbar from "../components/Nav";
 import HeroSection from "../components/HeroSection";
 import FollowupSection from "../components/FollowupSection";
 import GameplaySection from "../components/GameplaySection";
+import CollectionsSection from "../components/CollectionsSection";
 
 const Home: NextPage = () => {
   return (
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
         <HeroSection />
         <FollowupSection />
         <GameplaySection />
+        <CollectionsSection />
       </main>
     </div>
   );
