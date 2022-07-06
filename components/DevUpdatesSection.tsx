@@ -36,7 +36,7 @@ const monthlyUpdates = [
   },
 ];
 
-// Collection component
+// Update component
 const Update = ({
   title,
   src,
