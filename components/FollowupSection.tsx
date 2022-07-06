@@ -46,7 +46,7 @@ const FollowupSection: NextPage = () => {
             objectFit="fill"
           />
         </div>
-        <div className="absolute top-[50%] left-[5%] h-fit w-[350px] overflow-hidden rounded-xl border-4 border-white md:top-[62%] md:w-[250px] lg:left-[11%] lg:w-[250px] 2xl:left-[40%]">
+        <div className="absolute top-[50%] left-[5%] h-fit w-[340px] overflow-hidden rounded-xl border-4 border-white md:top-[62%] md:w-[250px] lg:left-[11%] lg:w-[250px] 2xl:left-[40%]">
           <Image
             draggable={false}
             unoptimized={true}
