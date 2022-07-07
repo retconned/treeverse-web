@@ -7,6 +7,7 @@ import FollowupSection from "../components/FollowupSection";
 import GameplaySection from "../components/GameplaySection";
 import CollectionsSection from "../components/CollectionsSection";
 import DevUpdatesSection from "../components/DevUpdatesSection";
+import TeamSection from "../components/TeamSection";
 
 const Home: NextPage = () => {
   return (
@@ -27,6 +28,7 @@ const Home: NextPage = () => {
         <GameplaySection />
         <CollectionsSection />
         <DevUpdatesSection />
+        <TeamSection />
       </main>
     </div>
   );
