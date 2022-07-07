@@ -9,6 +9,7 @@ import CollectionsSection from "../components/CollectionsSection";
 import DevUpdatesSection from "../components/DevUpdatesSection";
 import TeamSection from "../components/TeamSection";
 import BackersSection from "../components/BackersSection";
+import FaqSection from "../components/FaqSection";
 
 const Home: NextPage = () => {
   return (
@@ -31,6 +32,7 @@ const Home: NextPage = () => {
         <DevUpdatesSection />
         <TeamSection />
         <BackersSection />
+        <FaqSection />
       </main>
     </div>
   );

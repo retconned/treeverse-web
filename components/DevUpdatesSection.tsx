@@ -47,7 +47,7 @@ const Update = ({
   link: string;
 }) => {
   return (
-    <Link href={link}>
+    <a href={link} target={"_blank"} rel={"noreferrer"}>
       <div className="mr-4 mt-4 flex h-auto max-h-64 w-[20rem] cursor-pointer flex-col rounded-xl bg-treeGreen bg-opacity-20 py-3 duration-300 hover:scale-105 hover:bg-opacity-30">
         <div className="flex h-[50%] flex-row items-center justify-center">
           <div className="my-2 w-[15rem] select-none  overflow-hidden rounded-lg border-0 border-white  ">
@@ -70,7 +70,7 @@ const Update = ({
           </div>
         </div>
       </div>
-    </Link>
+    </a>
   );
 };
 
