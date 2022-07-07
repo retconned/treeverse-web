@@ -8,6 +8,7 @@ import GameplaySection from "../components/GameplaySection";
 import CollectionsSection from "../components/CollectionsSection";
 import DevUpdatesSection from "../components/DevUpdatesSection";
 import TeamSection from "../components/TeamSection";
+import BackersSection from "../components/BackersSection";
 
 const Home: NextPage = () => {
   return (
@@ -29,6 +30,7 @@ const Home: NextPage = () => {
         <CollectionsSection />
         <DevUpdatesSection />
         <TeamSection />
+        <BackersSection />
       </main>
     </div>
   );

@@ -22,7 +22,7 @@ const Collection = ({
     <div className="mr-4 mt-4 flex h-[36rem] w-[22rem] flex-col rounded-xl bg-treeDarkGray py-3 ">
       <div className="flex h-1/2 items-center justify-center">
         <div className="w-[15rem] cursor-pointer select-none  overflow-hidden rounded-lg border-4 border-white duration-150 hover:border-treeGreen ">
-          <Link href={link}>
+          <a href={link} target={"_blank"} rel={"noreferrer"}>
             <Image
               priority={true}
               draggable={false}
@@ -32,7 +32,7 @@ const Collection = ({
               layout="responsive"
               objectFit="fill"
             />
-          </Link>
+          </a>
         </div>
       </div>
       <div className="flex h-1/2 items-center justify-center  px-8">
