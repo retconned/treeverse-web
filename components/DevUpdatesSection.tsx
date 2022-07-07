@@ -48,9 +48,9 @@ const Update = ({
 }) => {
   return (
     <Link href={link}>
-      <div className="flex h-auto max-h-64 w-[20rem] cursor-pointer flex-col rounded-xl bg-treeGreen bg-opacity-20 py-3 duration-300 hover:scale-105 hover:bg-opacity-30">
+      <div className="mr-4 mt-4 flex h-auto max-h-64 w-[20rem] cursor-pointer flex-col rounded-xl bg-treeGreen bg-opacity-20 py-3 duration-300 hover:scale-105 hover:bg-opacity-30">
         <div className="flex h-[50%] flex-row items-center justify-center">
-          <div className="my-2 w-[15rem]   overflow-hidden rounded-lg border-0 border-white  ">
+          <div className="my-2 w-[15rem] select-none  overflow-hidden rounded-lg border-0 border-white  ">
             <Image
               priority={true}
               draggable={false}
@@ -81,7 +81,7 @@ const DevUpdatesSection: NextPage = () => {
         Dev Updates
       </p>
       <div className="w-10/12">
-        <div className="flex flex-row flex-wrap items-center justify-center space-y-10 md:justify-between md:space-y-5">
+        <div className="flex flex-row flex-wrap items-center justify-center md:justify-between">
           {monthlyUpdates.map((update, index) => {
             return (
               <Update

@@ -19,9 +19,9 @@ const Collection = ({
   link: string;
 }) => {
   return (
-    <div className="flex h-[36rem] w-[22rem] flex-col rounded-xl bg-treeDarkGray py-3 ">
+    <div className="mr-4 mt-4 flex h-[36rem] w-[22rem] flex-col rounded-xl bg-treeDarkGray py-3 ">
       <div className="flex h-1/2 items-center justify-center">
-        <div className="w-[15rem] cursor-pointer  overflow-hidden rounded-lg border-4 border-white duration-150 hover:border-treeGreen ">
+        <div className="w-[15rem] cursor-pointer select-none  overflow-hidden rounded-lg border-4 border-white duration-150 hover:border-treeGreen ">
           <Link href={link}>
             <Image
               priority={true}
@@ -54,7 +54,7 @@ const CollectionsSection: NextPage = () => {
         Collections
       </p>
       <div className="w-10/12 md:pl-4 lg:bg-treeGray lg:pl-0">
-        <div className="flex w-full flex-row flex-wrap items-center justify-center space-y-10 md:w-[80vw] md:justify-around md:space-y-3 lg:justify-around lg:space-y-0 xl:justify-around">
+        <div className="flex w-full flex-row flex-wrap items-center justify-center md:w-[80vw] md:justify-around lg:justify-around xl:justify-around">
           <Collection
             link="https://opensea.io/"
             src={NFTrees}
