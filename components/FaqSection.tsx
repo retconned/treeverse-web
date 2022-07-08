@@ -63,7 +63,7 @@ const Question = ({
 }) => {
   return (
     <div>
-      <div className="mr-10 mt-10 flex  min-h-[12rem] w-[20rem] cursor-pointer flex-col rounded-xl bg-treeGray bg-opacity-20 py-3 duration-300 hover:scale-105 hover:bg-opacity-30">
+      <div className="mt-6 mr-6 ml-6 flex min-h-[12rem] w-[16rem] cursor-pointer  flex-col rounded-xl bg-treeGray bg-opacity-20 py-3 duration-300 hover:scale-105 hover:bg-opacity-30 md:mr-10 md:mt-10 md:w-[20rem]">
         <div className="flex h-[20%] items-center justify-center py-2 px-8">
           <div className="flex flex-col items-start justify-center space-y-4 text-start">
             <p className="w-fit text-xl font-semibold text-treeGray duration-150 hover:text-treeGreen">
@@ -81,10 +81,12 @@ const Question = ({
 
 const FaqSection: NextPage = () => {
   return (
-    <main className="flex h-fit flex-col items-center justify-center bg-treeDarkGreen py-14">
-      <div className="flex w-9/12 flex-col items-start justify-center py-4 text-center font-poppins text-5xl text-treeGreen md:flex-row md:py-0 md:text-7xl lg:justify-around">
-        <p className="mt-10 w-[23%] pl-4 text-start font-bold">FAQ</p>
-        <div className="flex w-10/12 flex-row flex-wrap items-start justify-center bg-opacity-20">
+    <main className="flex h-fit items-center justify-center bg-treeDarkGreen md:flex-col md:items-center md:py-14">
+      <div className="flex w-10/12 flex-col items-center justify-center  py-4 text-center font-poppins text-5xl text-treeGreen md:flex-row md:py-0 md:text-7xl lg:justify-around">
+        <p className="mt-4  text-center font-bold md:mt-10 md:w-[23%] md:self-start md:pl-4 md:text-start">
+          FAQ
+        </p>
+        <div className="justify-centerbg-green-300 flex flex-row flex-wrap items-center bg-opacity-20 md:w-10/12 md:items-start md:justify-center">
           {faqQuestions.map((member, index) => {
             return (
               <Question

@@ -10,6 +10,7 @@ import DevUpdatesSection from "../components/DevUpdatesSection";
 import TeamSection from "../components/TeamSection";
 import BackersSection from "../components/BackersSection";
 import FaqSection from "../components/FaqSection";
+import Footer from "../components/FooterSection";
 
 const Home: NextPage = () => {
   return (
@@ -33,6 +34,7 @@ const Home: NextPage = () => {
         <TeamSection />
         <BackersSection />
         <FaqSection />
+        <Footer />
       </main>
     </div>
   );
