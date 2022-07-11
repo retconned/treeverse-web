@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 import MonthlyTreeUpdate1 from "../public/Monthly Treeverse Update.webp";
 import MonthlyTreeUpdate2 from "../public/Monthly Treeverse Update 2.jpeg";
@@ -34,7 +35,43 @@ const monthlyUpdates = [
     picture: MonthlyTreeUpdate5,
     link: "https://twitter.com/",
   },
+  {
+    title: "Monthly Update #6",
+    picture: MonthlyTreeUpdate5,
+    link: "https://twitter.com/",
+  },
+  {
+    title: "Monthly Update #7",
+    picture: MonthlyTreeUpdate5,
+    link: "https://twitter.com/",
+  },
+  {
+    title: "Monthly Update #8",
+    picture: MonthlyTreeUpdate5,
+    link: "https://twitter.com/",
+  },
 ];
+
+const list = {
+  visible: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.2,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    transition: {
+      when: "afterChildren",
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: -50 },
+  visible: { opacity: 1, y: 0 },
+};
 
 // Update component
 const Update = ({
@@ -47,14 +84,14 @@ const Update = ({
   link: string;
 }) => {
   return (
-    <a href={link} target={"_blank"} rel={"noreferrer"}>
+    <motion.a variants={item} href={link} target={"_blank"} rel={"noreferrer"}>
       <div className="mr-4 mt-4 flex h-auto max-h-64 w-[20rem] cursor-pointer flex-col rounded-xl bg-treeGreen bg-opacity-20 py-3 duration-300 hover:scale-105 hover:bg-opacity-30">
         <div className="flex h-[50%] flex-row items-center justify-center">
           <div className="my-2 w-[15rem] select-none  overflow-hidden rounded-lg border-0 border-white  ">
             <Image
-              priority={true}
+              // priority={true}
               draggable={false}
-              unoptimized={true}
+              // unoptimized={true}
               src={src}
               alt={title}
               layout="responsive"
@@ -70,18 +107,28 @@ const Update = ({
           </div>
         </div>
       </div>
-    </a>
+    </motion.a>
   );
 };
 
 const DevUpdatesSection: NextPage = () => {
   return (
     <main className="flex h-fit flex-col items-center justify-center bg-treeDarkGreen py-14 ">
-      <p className="w-full py-0 pb-11 text-center font-poppins text-5xl font-semibold text-treeGreen md:py-0 md:pt-2 md:pb-10 md:text-7xl">
+      <motion.p
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0 }}
+        className="w-full py-0 pb-11 text-center font-poppins text-5xl font-semibold text-treeGreen md:py-0 md:pt-2 md:pb-10 md:text-7xl"
+      >
         Dev Updates
-      </p>
-      <div className="w-10/12">
-        <div className="flex flex-row flex-wrap items-center justify-center md:justify-between">
+      </motion.p>
+      <div className="w-9/12">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={list}
+          className="flex flex-row flex-wrap items-center justify-center md:justify-between"
+        >
           {monthlyUpdates.map((update, index) => {
             return (
               <Update
@@ -92,7 +139,7 @@ const DevUpdatesSection: NextPage = () => {
               />
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </main>
   );

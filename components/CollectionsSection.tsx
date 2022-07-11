@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 import NFTrees from "../public/NFTrees.webp";
 import TreeversePlots from "../public/TreeversePlots.webp";
@@ -19,14 +20,19 @@ const Collection = ({
   link: string;
 }) => {
   return (
-    <div className="mr-4 mt-4 flex h-[36rem] w-[22rem] flex-col rounded-xl bg-treeDarkGray py-3 ">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0 }}
+      className="mr-4 mt-4 flex h-[36rem] w-[22rem] flex-col rounded-xl bg-treeDarkGray py-3 duration-300 hover:bg-treeDarkGrayAlt "
+    >
       <div className="flex h-1/2 items-center justify-center">
-        <div className="w-[15rem] cursor-pointer select-none  overflow-hidden rounded-lg border-4 border-white duration-150 hover:border-treeGreen ">
+        <div className="w-[15rem] cursor-pointer select-none  overflow-hidden rounded-lg border-4 border-white duration-150 hover:border-treeGreen">
           <a href={link} target={"_blank"} rel={"noreferrer"}>
             <Image
-              priority={true}
+              // priority={true}
               draggable={false}
-              unoptimized={true}
+              // unoptimized={true}
               src={src}
               alt="Floating island environment design"
               layout="responsive"
@@ -37,22 +43,39 @@ const Collection = ({
       </div>
       <div className="flex h-1/2 items-center justify-center  px-8">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <p className="w-fit cursor-pointer text-2xl font-bold duration-150 hover:text-treeGreen">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0 }}
+            className="w-fit cursor-pointer text-2xl font-bold duration-150 hover:text-treeGreen"
+          >
             {title}
-          </p>
-          <p className="font-barlow text-base font-semibold">{description}</p>
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0 }}
+            className="font-barlow text-base font-semibold"
+          >
+            {description}
+          </motion.p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 const CollectionsSection: NextPage = () => {
   // console.log(JungleConcept);
   return (
     <main className="flex h-fit flex-col items-center justify-center bg-treeGray py-14 ">
-      <p className="w-full py-0 pb-11 text-center font-poppins text-5xl font-semibold text-treeGreen md:py-0 md:pt-2 md:pb-10 md:text-7xl">
+      <motion.p
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0 }}
+        className="w-full py-0 pb-11 text-center font-poppins text-5xl font-semibold text-treeGreen md:py-0 md:pt-2 md:pb-10 md:text-7xl"
+      >
         Collections
-      </p>
+      </motion.p>
       <div className="w-10/12 md:pl-4 lg:bg-treeGray lg:pl-0">
         <div className="flex w-full flex-row flex-wrap items-center justify-center md:w-[80vw] md:justify-around lg:justify-around xl:justify-around">
           <Collection

@@ -1,5 +1,9 @@
 import type { NextPage } from "next";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+// import useeffect
+import { useEffect, useState } from "react";
 
 // gameplay component
 import JungleConcept from "../public/Environment_JungleConcept_01.webp";
@@ -14,27 +18,37 @@ const GameplayImageComp = ({
   flipped: boolean;
 }) => {
   return (
-    <div
+    <motion.div
       className={`flex h-fit w-full ${
         flipped ? "flex-col lg:flex-row-reverse" : "flex-col lg:flex-row"
       } items-center justify-around  py-14 px-28 text-treeGray`}
     >
-      <div className="w-[20rem] overflow-hidden rounded-lg border-4 border-white md:w-[30rem] ">
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        className="w-[20rem] overflow-hidden rounded-lg border-4 border-white md:w-[30rem] "
+      >
         <Image
-          priority={true}
+          // priority={true}
           draggable={false}
-          unoptimized={true}
+          // unoptimized={true}
           src={JungleConcept}
           alt="Floating island environment design"
           layout="responsive"
           objectFit="fill"
         />
-      </div>
-      <div className="flex h-full w-[20rem] flex-col justify-center space-y-4 px-4 pt-6 text-center md:w-[30rem] md:justify-center md:pt-0  md:text-left lg:w-[50rem] ">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        className="flex h-full w-[20rem] flex-col justify-center space-y-4 px-4 pt-6 text-center md:w-[30rem] md:justify-center md:pt-0  md:text-left lg:w-[50rem] "
+      >
         <p className="text-3xl font-semibold md:text-5xl">{title}</p>
         <p className="font-barlow text-lg md:text-xl">{description}</p>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 const GameplayVideoComp = ({
@@ -49,12 +63,17 @@ const GameplayVideoComp = ({
   src: string;
 }) => {
   return (
-    <div
+    <motion.div
       className={`flex h-fit w-full ${
         flipped ? "flex-col lg:flex-row-reverse" : "flex-col lg:flex-row"
       } items-center justify-around  py-14 px-28 text-treeGray`}
     >
-      <div className="w-[20rem] overflow-hidden rounded-lg border-4 border-white md:w-[30rem] ">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        className="w-[20rem] overflow-hidden rounded-lg border-4 border-white md:w-[30rem] "
+      >
         {/* add a video player */}
         <video
           className="aspect-video h-full w-full"
@@ -67,23 +86,34 @@ const GameplayVideoComp = ({
           muted
           src={src}
         />
-      </div>
-      <div className="flex h-full w-[20rem] flex-col justify-center space-y-4 px-4 pt-6 text-center md:w-[30rem] md:justify-center md:pt-0 md:text-left lg:w-[50rem] ">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        className="flex h-full w-[20rem] flex-col justify-center space-y-4 px-4 pt-6 text-center md:w-[30rem] md:justify-center md:pt-0 md:text-left lg:w-[50rem] "
+      >
         <p className="text-3xl font-semibold md:text-5xl">{title}</p>
         <p className="font-barlow text-lg font-medium md:text-xl">
           {description}
         </p>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
 const GameplaySection: NextPage = () => {
+  // console.log(isMobile);
   return (
     <main className="h-fill flex w-full flex-col bg-treeDarkGreen">
-      <p className="pt-12 pb-0 text-center font-poppins text-5xl font-semibold text-treeGray md:pt-16 md:pb-10 md:text-7xl">
+      <motion.p
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0 }}
+        className="pt-12 pb-0 text-center font-poppins text-5xl font-semibold text-treeGray md:pt-16 md:pb-10 md:text-7xl"
+      >
         Gameplay
-      </p>
+      </motion.p>
       <GameplayVideoComp
         src="/gameplay-one.mp4"
         flipped={false}

@@ -13,6 +13,7 @@ module.exports = {
         treeCyan: "#109DA0",
         treeGray: "#E8EAED",
         treeDarkGray: "#D9D9D9",
+        treeDarkGrayAlt: "#cccccc",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

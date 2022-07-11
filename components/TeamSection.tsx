@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 import Loop from "../public/Loop.webp";
 import Aizea from "../public/Aizea.webp";
@@ -303,6 +304,27 @@ const teamMembers: TeamMember[] = [
   },
 ];
 
+const list = {
+  visible: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.2,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    transition: {
+      when: "afterChildren",
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: -50 },
+  visible: { opacity: 1, y: 0 },
+};
+
 // interface for the team members
 interface TeamMember {
   name: string;
@@ -322,13 +344,16 @@ const Person = ({
   role: string;
 }) => {
   return (
-    <div className="mx-4 my-4 flex h-72 max-h-72 w-[16rem] cursor-pointer select-none flex-col rounded-xl bg-opacity-20 py-3 duration-300 hover:scale-105 hover:bg-opacity-30">
+    <motion.div
+      variants={item}
+      className="mx-4 my-4 flex h-72 max-h-72 w-[16rem] cursor-pointer select-none flex-col rounded-xl bg-opacity-20 py-3 duration-300 hover:scale-105 hover:bg-opacity-30"
+    >
       <div className="flex h-[50%] flex-row items-center justify-center">
         <div className="my-2 h-[8rem] w-[8rem]  overflow-hidden rounded-full border-4 border-white  ">
           <Image
-            priority={true}
+            // priority={true}
             draggable={false}
-            unoptimized={true}
+            // unoptimized={true}
             src={src}
             alt={`Picture of ${name}`}
             layout="responsive"
@@ -344,7 +369,7 @@ const Person = ({
           <p className="text-treeGreen">{role}</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -352,16 +377,33 @@ const TeamSection: NextPage = () => {
   return (
     <main className="flex h-fit flex-col items-center justify-center bg-treeGray py-14 ">
       <div className="flex w-9/12 items-center justify-center py-4 text-center font-poppins text-5xl text-treeGreen md:py-8 md:text-6xl lg:justify-between">
-        <p className="font-bold">Meet the Team</p>
-        <p className="hidden w-6/12 items-center justify-center text-base text-black sm:hidden lg:block">
+        <motion.p
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0 }}
+          className="font-bold"
+        >
+          Meet the Team
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="hidden w-6/12 items-center justify-center text-base text-black sm:hidden lg:block"
+        >
           Here is the team at{" "}
           <span className="font-semibold">Endless Clouds</span> focused on
           developing Treeverse. Some of our team members have contributed to
           games like League of Legends, Rainbow 6 Siege, Horizon Zero Dawn, Dark
           Souls 3, Marvel Spiderman... and are now excited to build Treeverse!
-        </p>
+        </motion.p>
       </div>
-      <div className="flex w-10/12 flex-row flex-wrap justify-center bg-opacity-20">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={list}
+        className="flex w-10/12 flex-row flex-wrap justify-center bg-opacity-20"
+      >
         {teamMembers.map((member, index) => {
           return (
             <Person
@@ -372,7 +414,7 @@ const TeamSection: NextPage = () => {
             />
           );
         })}
-      </div>
+      </motion.div>
     </main>
   );
 };
