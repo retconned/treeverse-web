@@ -1,13 +1,12 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 
 import IdeocoLogo from "../public/ideocologo.webp";
 import AnimeocaLogo from "../public/animocalogo.webp";
 import SkyvisionLogo from "../public/skyvisionlogo.webp";
 
-// collection component
+// backer component
 const Backer = ({
   src,
   link,
@@ -28,9 +27,7 @@ const Backer = ({
         <div className="w-[15rem] cursor-pointer select-none  overflow-hidden rounded-lg border-4 border-white duration-150 hover:border-treeGreen ">
           <a href={link} target={"_blank"} rel={"noreferrer"}>
             <Image
-              // priority={true}
               draggable={false}
-              // unoptimized={true}
               src={src}
               alt={alt}
               layout="responsive"

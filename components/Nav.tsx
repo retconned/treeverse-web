@@ -5,14 +5,11 @@ import Link from "next/link";
 import { FaBars } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-
-// import useState from react
 import { useState } from "react";
 
 const menu = {
   open: {
     opacity: 1,
-    // x: "0%",
     transition: {
       ease: "easeInOut",
       duration: 0.2,
@@ -20,7 +17,6 @@ const menu = {
   },
   closed: {
     opacity: 0,
-    // x: "-100%",
     transition: {
       ease: "easeInOut",
       duration: 0.2,

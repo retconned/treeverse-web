@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 
 import MonthlyTreeUpdate1 from "../public/Monthly Treeverse Update.webp";
@@ -89,9 +88,7 @@ const Update = ({
         <div className="flex h-[50%] flex-row items-center justify-center">
           <div className="my-2 w-[15rem] select-none  overflow-hidden rounded-lg border-0 border-white  ">
             <Image
-              // priority={true}
               draggable={false}
-              // unoptimized={true}
               src={src}
               alt={title}
               layout="responsive"

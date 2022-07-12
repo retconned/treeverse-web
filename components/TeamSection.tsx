@@ -333,7 +333,6 @@ interface TeamMember {
     src: any;
   };
 }
-
 const Person = ({
   name,
   src,
@@ -351,9 +350,7 @@ const Person = ({
       <div className="flex h-[50%] flex-row items-center justify-center">
         <div className="my-2 h-[8rem] w-[8rem]  overflow-hidden rounded-full border-4 border-white  ">
           <Image
-            // priority={true}
             draggable={false}
-            // unoptimized={true}
             src={src}
             alt={`Picture of ${name}`}
             layout="responsive"

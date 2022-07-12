@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 
 import NFTrees from "../public/NFTrees.webp";
@@ -63,7 +62,6 @@ const Collection = ({
   );
 };
 const CollectionsSection: NextPage = () => {
-  // console.log(JungleConcept);
   return (
     <main
       className="flex h-fit flex-col items-center justify-center bg-treeGray py-14 "
@@ -95,9 +93,7 @@ const CollectionsSection: NextPage = () => {
             link="https://opensea.io/"
             src={Timeless}
             title="Timeless"
-            description="Timeless are unique anime characters that are purely cosmetic. Differentiate yourself from others with a clean badge and unique look. Timeless are CC0 and designed for multiple virtual worlds, including Treeverse.
-
-            "
+            description="Timeless are unique anime characters that are purely cosmetic. Differentiate yourself from others with a clean badge and unique look. Timeless are CC0 and designed for multiple virtual worlds, including Treeverse."
           />
         </div>
       </div>

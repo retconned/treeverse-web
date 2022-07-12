@@ -4,7 +4,6 @@ import Image from "next/image";
 import FullLogo from "../public/Full logo.png";
 import { motion } from "framer-motion";
 
-// import icons from react-icons
 import { FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa";
 
 const Footer: NextPage = () => {

@@ -2,10 +2,6 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-// import useeffect
-import { useEffect, useState } from "react";
-
-// gameplay component
 import JungleConcept from "../public/Environment_JungleConcept_01.webp";
 
 const GameplayImageComp = ({
@@ -30,9 +26,7 @@ const GameplayImageComp = ({
         className="w-[20rem] overflow-hidden rounded-lg border-4 border-white md:w-[30rem] "
       >
         <Image
-          // priority={true}
           draggable={false}
-          // unoptimized={true}
           src={JungleConcept}
           alt="Floating island environment design"
           layout="responsive"
@@ -103,7 +97,6 @@ const GameplayVideoComp = ({
 };
 
 const GameplaySection: NextPage = () => {
-  // console.log(isMobile);
   return (
     <main
       className="h-fill flex w-full flex-col bg-treeDarkGreen"

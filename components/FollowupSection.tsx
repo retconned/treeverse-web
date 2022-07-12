@@ -2,9 +2,6 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-// import useeffect
-import { useEffect, useState } from "react";
-
 import CharDesign from "../public/Character-design.webp";
 import IslandDesign from "../public/Environment_floating-island-expansion.webp";
 import LazerIslandDesign from "../public/Laze island.webp";
@@ -85,7 +82,6 @@ const FollowupSection: NextPage = () => {
         >
           <Image
             draggable={false}
-            // unoptimized={true}
             src={LazerIslandDesign}
             alt="island environment design with laser in the middle"
             layout="responsive"

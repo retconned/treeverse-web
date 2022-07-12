@@ -17,8 +17,6 @@ const HeroSection: NextPage = () => {
             className="flex flex-col items-center justify-center space-y-3 md:mb-20 md:space-y-6"
           >
             <div className="block select-none flex-col">
-              {/* logo fade animation on initial page */}
-
               <Image
                 src={FullLogo}
                 width={900}
