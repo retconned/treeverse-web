@@ -86,7 +86,8 @@ const Navbar: NextPage = () => {
         <motion.button
           whileTap={{ scale: 1.1 }}
           onClick={toggleMenu}
-          className="hover:scale-110  md:hover:scale-100  "
+          className="hover:scale-110  md:hover:scale-100"
+          title="menu button"
         >
           {!menuOpen ? (
             <FaBars size={30} color={"white"} />
