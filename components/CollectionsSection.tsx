@@ -30,9 +30,7 @@ const Collection = ({
         <div className="w-[15rem] cursor-pointer select-none  overflow-hidden rounded-lg border-4 border-white duration-150 hover:border-treeGreen">
           <a href={link} target={"_blank"} rel={"noreferrer"}>
             <Image
-              // priority={true}
               draggable={false}
-              // unoptimized={true}
               src={src}
               alt="Floating island environment design"
               layout="responsive"
@@ -67,7 +65,10 @@ const Collection = ({
 const CollectionsSection: NextPage = () => {
   // console.log(JungleConcept);
   return (
-    <main className="flex h-fit flex-col items-center justify-center bg-treeGray py-14 ">
+    <main
+      className="flex h-fit flex-col items-center justify-center bg-treeGray py-14 "
+      id="Collections"
+    >
       <motion.p
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}

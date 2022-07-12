@@ -113,7 +113,10 @@ const Update = ({
 
 const DevUpdatesSection: NextPage = () => {
   return (
-    <main className="flex h-fit flex-col items-center justify-center bg-treeDarkGreen py-14 ">
+    <main
+      className="flex h-fit flex-col items-center justify-center bg-treeDarkGreen py-14 "
+      id="DevUpdates"
+    >
       <motion.p
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}

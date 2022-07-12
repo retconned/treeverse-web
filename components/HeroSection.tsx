@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 
 import BG from "../public/BG-Image.png";
 
-const HerSection: NextPage = () => {
+const HeroSection: NextPage = () => {
   return (
-    <div className="relative">
+    <main className="relative" id="Hero">
       <div className="bg-blue-400 md:block">
         <div className=" absolute inset-0 z-20 flex flex-col items-center justify-center ">
           <motion.div
@@ -58,8 +58,8 @@ const HerSection: NextPage = () => {
           />
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 
-export default HerSection;
+export default HeroSection;

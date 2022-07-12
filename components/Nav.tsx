@@ -78,12 +78,12 @@ const Navbar: NextPage = () => {
       />
       <div className="hidden md:flex">
         <ul className=" md:flex md:flex-row md:space-x-4">
-          <NavButton href="/" text="Home" />
-          <NavButton href="/Gameplay" text="Gameplay" />
-          <NavButton href="/Collections" text="Collections" />
-          <NavButton href="/Updates" text="Updates" />
-          <NavButton href="/Updates" text="Team" />
-          <NavButton href="/Backers" text="Backers" />
+          <NavButton href="#" text="Home" />
+          <NavButton href="#Gameplay" text="Gameplay" />
+          <NavButton href="#Collections" text="Collections" />
+          <NavButton href="#DevUpdates" text="Updates" />
+          <NavButton href="#Team" text="Team" />
+          <NavButton href="#Backers" text="Backers" />
         </ul>
       </div>
       <div className="z-40 block md:hidden">

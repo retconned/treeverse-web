@@ -375,7 +375,10 @@ const Person = ({
 
 const TeamSection: NextPage = () => {
   return (
-    <main className="flex h-fit flex-col items-center justify-center bg-treeGray py-14 ">
+    <main
+      className="flex h-fit flex-col items-center justify-center bg-treeGray py-14 "
+      id="Team"
+    >
       <div className="flex w-9/12 items-center justify-center py-4 text-center font-poppins text-5xl text-treeGreen md:py-8 md:text-6xl lg:justify-between">
         <motion.p
           initial={{ opacity: 0, x: -100 }}

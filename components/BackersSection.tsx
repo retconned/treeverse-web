@@ -44,7 +44,10 @@ const Backer = ({
 };
 const BackersSection: NextPage = () => {
   return (
-    <main className="flex h-fit flex-col items-center justify-center bg-treeGray py-14 ">
+    <main
+      className="flex h-fit flex-col items-center justify-center bg-treeGray py-14 "
+      id="Backers"
+    >
       <motion.p
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}

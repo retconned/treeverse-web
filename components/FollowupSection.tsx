@@ -10,19 +10,13 @@ import IslandDesign from "../public/Environment_floating-island-expansion.webp";
 import LazerIslandDesign from "../public/Laze island.webp";
 
 const FollowupSection: NextPage = () => {
-  // const [width, height, isMobile] = useDeviceSize();
-  // console.log(width, height, isMobile);
-
-  // check if device is mobile nextjs
-
-  // check if device is mobile react
-
   return (
-    <main className="flex w-full flex-col bg-treeGray py-0 sm:flex-col md:h-[91vh] md:flex-row">
+    <main
+      className="flex w-full flex-col bg-treeGray py-0 sm:flex-col md:h-[91vh] md:flex-row"
+      id="FollowUp"
+    >
       <div className="space-y-6 p-10 font-poppins md:space-y-10 md:p-32 lg:w-[80vw] ">
-        {/* wait till you get to main compoent to start animation */}
         <motion.p
-          // stagger animation for each element
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0 }}
@@ -62,7 +56,6 @@ const FollowupSection: NextPage = () => {
         >
           <Image
             draggable={false}
-            // unoptimized={true}
             src={CharDesign}
             alt="Character design"
             layout="responsive"

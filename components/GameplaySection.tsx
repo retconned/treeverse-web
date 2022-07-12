@@ -63,7 +63,7 @@ const GameplayVideoComp = ({
   src: string;
 }) => {
   return (
-    <motion.div
+    <motion.main
       className={`flex h-fit w-full ${
         flipped ? "flex-col lg:flex-row-reverse" : "flex-col lg:flex-row"
       } items-center justify-around  py-14 px-28 text-treeGray`}
@@ -98,14 +98,17 @@ const GameplayVideoComp = ({
           {description}
         </p>
       </motion.div>
-    </motion.div>
+    </motion.main>
   );
 };
 
 const GameplaySection: NextPage = () => {
   // console.log(isMobile);
   return (
-    <main className="h-fill flex w-full flex-col bg-treeDarkGreen">
+    <main
+      className="h-fill flex w-full flex-col bg-treeDarkGreen"
+      id="Gameplay"
+    >
       <motion.p
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
