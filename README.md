@@ -1,34 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌱 Treeverse website
 
-## Getting Started
+## **What is Treeverse ?**
 
-First, run the development server:
+**Treeverse** is a top-down open-world classless MMORPG built for mobile with social features and an emphasis on cooperative gameplay.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+# Screenshot
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![screenshot of the Treeverse website](https://i.imgur.com/Wj4WTFE.png)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+# What did i updated ?
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- A structure coherent design system.
+- Fully responsive design.
+- Up to date with the latest technologies (NextJS, TailwindCSS).
+- Surpasses current website in all preformence,accessibility & SEO scores @ 98%.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+# Run it locally
 
-## Learn More
+1. Clone the repo
 
-To learn more about Next.js, take a look at the following resources:
+   ```sh
+   git clone https://github.com/retconned/treeverse-web
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Change directory to the project folder
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```sh
+   cd treeverse-web
+   ```
 
-## Deploy on Vercel
+3. Run the app locally
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```sh
+   yarn dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Disclaimer
+
+This project is a fully functional prototype made for showcasing & educational purposes.
